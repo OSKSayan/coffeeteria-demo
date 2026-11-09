@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Coffeeteria · маленькая Греция в Шымкенте</title>
+<meta name="description" content="Coffeeteria — кофейня в греческом стиле в Шымкенте, Аргынбекова 29/4. Завтраки, кофе, ланчи. Ежедневно 08:00–02:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fbfaf6;
+  --stone:#f1ede3;
+  --aegean:#1f5fa8;
+  --aegean-2:#164a86;
+  --deep:#0f2b4f;
+  --sky:#d9e9f7;
+  --lemon:#f4cf3a;
+  --olive:#7a8a45;
+  --ink:#16243a;
+  --ink-soft:#5a6578;
+  --line:rgba(22,36,58,.12);
+  --head:"Marcellus", Georgia, serif;
+  --sans:"Nunito Sans", system-ui, sans-serif;
+  --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+
+.demo{background:var(--deep);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 16px}
+.meander{height:16px;background:
+  linear-gradient(90deg,var(--aegean) 0 2px,transparent 2px) 0 0/16px 16px,
+  linear-gradient(var(--aegean) 0 2px,transparent 2px) 0 0/16px 16px,
+  var(--white);opacity:.9}
+
+.nav{position:sticky;top:0;z-index:20;background:rgba(251,250,246,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--head);font-size:24px;letter-spacing:.14em;text-decoration:none;color:var(--aegean);display:flex;align-items:center;gap:8px}
+.logo span{font-size:20px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14.5px;font-weight:600}
+.nav ul a{text-decoration:none;color:var(--ink-soft);transition:color .2s}
+.nav ul a:hover{color:var(--aegean)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 26px;font:700 15px/1 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .2s,color .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn-blue{background:var(--aegean);color:#fff}
+.btn-blue:hover{background:var(--aegean-2)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-lemon{background:var(--lemon);color:var(--ink)}
+.btn-lemon:hover{background:#ffe066}
+.btn-o{border-color:#fff;color:#fff}
+.btn-o:hover{background:#fff;color:var(--aegean)}
+.nav .btn{padding:10px 18px;font-size:14px}
+
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.08;margin:0}
+.kicker{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--aegean);margin:0 0 14px}
+
+/* hero */
+.hero{padding:56px 0 0;background:linear-gradient(180deg,var(--sky),var(--white) 62%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.greek{font-family:var(--head);font-size:22px;color:var(--aegean);margin:0 0 8px;min-height:1.3em}
+.greek small{font-family:var(--sans);font-size:14px;color:var(--ink-soft);margin-left:6px}
+h1{font-size:clamp(44px,6.6vw,84px)}
+.lead{font-size:19px;color:var(--ink-soft);max-width:510px;margin:20px 0 26px}
+.award{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 18px 8px 8px;margin-bottom:26px;box-shadow:0 14px 30px -22px rgba(15,43,79,.5)}
+.award i{width:36px;height:36px;border-radius:50%;background:var(--lemon);display:grid;place-items:center;font-style:normal;font-size:18px}
+.award b{display:block;font-size:14.5px;line-height:1.2}
+.award span{font-size:12.5px;color:var(--ink-soft)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Santorini scene */
+.scene{position:relative;height:440px}
+.sun{position:absolute;right:16%;top:20px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fff3b0,var(--lemon));box-shadow:0 0 60px rgba(244,207,58,.55)}
+.sea{position:absolute;left:-20%;right:-20%;bottom:0;height:120px;background:linear-gradient(180deg,#3b82c9,var(--aegean-2));border-radius:50% 50% 0 0/24px 24px 0 0}
+.sea::after{content:"";position:absolute;inset:18px 0 auto;height:8px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0 30px,transparent 30px 70px);animation:wave 6s linear infinite;opacity:.6}
+@keyframes wave{to{background-position:140px 0}}
+.house{position:absolute;bottom:100px;background:#fff;border-radius:6px 6px 0 0;box-shadow:inset -10px 0 0 rgba(15,43,79,.05),0 10px 24px -14px rgba(15,43,79,.4)}
+.house .win{position:absolute;width:16px;height:22px;border-radius:8px 8px 2px 2px;background:var(--aegean);left:50%;transform:translateX(-50%);bottom:18px}
+.dome{position:absolute;left:50%;transform:translateX(-50%);bottom:100%;width:72%;aspect-ratio:2/1;border-radius:999px 999px 0 0;background:var(--aegean)}
+.dome::after{content:"";position:absolute;left:50%;top:-16px;width:3px;height:18px;background:#fff;transform:translateX(-50%)}
+.h1{left:8%;width:120px;height:150px}
+.h2{left:34%;width:150px;height:210px}
+.h3{left:64%;width:110px;height:130px}
+.h4{left:84%;width:80px;height:100px}
+.lemon{position:absolute;font-size:44px;left:2%;top:40px;animation:sway 5s ease-in-out infinite;transform-origin:top center}
+@keyframes sway{50%{transform:rotate(8deg)}}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--deep);color:#fff;border-radius:24px;margin:-40px auto 0;position:relative;z-index:2;overflow:hidden}
+.stat{padding:22px 24px;border-right:1px solid rgba(255,255,255,.12)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--head);font-size:32px;line-height:1.1;color:var(--lemon)}
+.stat span{font-size:13.5px;color:rgba(255,255,255,.75)}
+
+section{padding:96px 0}
+.head{max-width:640px;margin-bottom:40px}
+.head h2{font-size:clamp(36px,5vw,60px)}
+.head p{color:var(--ink-soft);font-size:17px;margin:14px 0 0}
+
+/* wheel */
+.wheel-sec{background:var(--stone)}
+.wheel-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.wheel-box{position:relative;width:min(400px,100%);aspect-ratio:1;margin:0 auto}
+.pointer{position:absolute;left:50%;top:-14px;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:28px solid var(--deep);z-index:3;filter:drop-shadow(0 4px 4px rgba(0,0,0,.2))}
+.wheel{position:absolute;inset:0;border-radius:50%;border:10px solid #fff;box-shadow:0 30px 50px -24px rgba(15,43,79,.55);transition:transform 4.2s cubic-bezier(.12,.7,.1,1);overflow:hidden}
+.wheel .lbl{position:absolute;left:50%;top:50%;width:46%;transform-origin:0 50%;font-weight:800;font-size:13px;color:var(--ink);padding-left:44px;line-height:1.1;margin-top:-.55em}
+.wheel .lbl.on-blue{color:#fff}
+.hub{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--lemon);border:6px solid #fff;display:grid;place-items:center;font-size:30px;z-index:2;cursor:pointer;box-shadow:0 8px 18px rgba(0,0,0,.18);transition:transform .2s}
+.hub:hover{transform:scale(1.06)}
+.result{background:#fff;border-radius:var(--r);padding:28px;border:1px solid var(--line);min-height:170px}
+.result small{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--olive)}
+.result h3{font-size:34px;margin:8px 0;color:var(--aegean)}
+.result p{margin:0;color:var(--ink-soft)}
+.result.pop{animation:pop .45s ease both}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* menu */
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;position:relative}
+.mc .e{font-size:34px;line-height:1;margin-bottom:12px}
+.mc h3{font-size:26px;margin-bottom:6px;color:var(--aegean)}
+.mc .when{font-size:13px;font-weight:700;color:var(--olive);margin-bottom:12px;display:block}
+.mc ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.mc li{background:var(--stone);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:600}
+.note{margin-top:22px;font-size:14px;color:var(--ink-soft)}
+.note b{color:var(--ink)}
+
+/* special */
+.special{background:var(--aegean);color:#fff;position:relative;overflow:hidden}
+.special::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 2px,transparent 2px 40px);pointer-events:none}
+.special .wrap{position:relative}
+.special .kicker{color:var(--lemon)}
+.special .head p{color:rgba(255,255,255,.8)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sc{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:var(--r);padding:30px 26px;transition:transform .25s ease,background .25s}
+.sc:hover{transform:translateY(-4px);background:rgba(255,255,255,.15)}
+.sc .e{font-size:40px;margin-bottom:14px}
+.sc h3{font-size:26px;margin-bottom:8px}
+.sc p{margin:0;opacity:.85;font-size:15.5px}
+
+/* family */
+.fam .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.fam h2{font-size:clamp(34px,4.6vw,54px)}
+.fam p{color:var(--ink-soft);font-size:17px}
+.feats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.feat .e{font-size:28px;margin-bottom:10px}
+.feat h3{font-family:var(--sans);font-weight:800;font-size:16px;margin-bottom:4px}
+.feat p{font-size:14px;margin:0;color:var(--ink-soft)}
+
+/* reviews */
+.reviews{background:var(--stone)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:#fff;border-radius:var(--r);padding:28px 26px;margin:0;border-top:5px solid var(--aegean)}
+.rev .stars{color:var(--lemon);letter-spacing:2px;text-shadow:0 0 1px rgba(0,0,0,.2)}
+.rev p{font-family:var(--head);font-size:21px;line-height:1.38;margin:10px 0 14px}
+.rev small{color:var(--ink-soft);font-size:13px}
+
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.vcard{background:#fff;border-radius:28px;padding:36px;border:1px solid var(--line)}
+.vcard h2{font-size:clamp(32px,4.2vw,48px);margin-bottom:22px}
+.rows{display:grid;gap:16px;margin:0}
+.row{display:grid;grid-template-columns:110px 1fr;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.row:last-child{border:0;padding:0}
+.row dt{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding-top:2px}
+.row dd{margin:0}
+.row dd a{text-decoration:none;border-bottom:2px solid var(--lemon)}
+.go{border-radius:28px;background:linear-gradient(180deg,#3b82c9,var(--aegean-2));color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:26px;min-height:340px;position:relative;overflow:hidden}
+.go::after{content:"";position:absolute;right:-50px;top:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fff3b0,var(--lemon));opacity:.95}
+.go > *{position:relative;z-index:1}
+.go h3{font-size:clamp(30px,4vw,44px);max-width:75%}
+.go p{margin:10px 0 0;opacity:.9;font-size:16.5px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.18);margin-bottom:14px}
+.status i{width:8px;height:8px;border-radius:50%;background:#7ff0b4}
+.status.closed i{background:#ffaa9e}
+.go .btns{display:flex;flex-wrap:wrap;gap:10px}
+
+footer{padding:34px 0 44px;font-size:13.5px;color:var(--ink-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer a{color:var(--aegean);font-weight:800;text-decoration:none}
+
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+@media (max-width:980px){
+  .mgrid,.sgrid,.revs{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
+}
+@media (max-width:760px){
+  .wrap{width:calc(100% - 32px)}
+  .nav ul{display:none}
+  .hero{padding-top:36px}
+  .hero .wrap,.wheel-wrap,.fam .wrap,.visit .wrap{grid-template-columns:minmax(0,1fr)}
+  .hero .wrap{gap:10px}
+  .scene{height:300px}
+  .sun{width:80px;height:80px;right:10%}
+  .h1{width:86px;height:110px}.h2{width:108px;height:150px}.h3{width:80px;height:96px}.h4{display:none}
+  .house{bottom:90px}
+  .sea{height:105px}
+  .stat{padding:18px}
+  .stat b{font-size:26px}
+  section{padding:72px 0}
+  .mgrid,.sgrid,.revs{grid-template-columns:1fr}
+  .wheel-wrap{gap:36px}
+  .wheel .lbl{font-size:11.5px;padding-left:38px}
+  .hub{width:70px;height:70px;margin:-35px 0 0 -35px;font-size:26px}
+  .row{grid-template-columns:1fr;gap:4px}
+  .vcard,.go{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">Демо-концепт сайта от Pixel Studio · не официальный сайт кофейни</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span aria-hidden="true">🍋</span>COFFEETERIA</a>
+    <ul>
+      <li><a href="#wheel">Что заказать</a></li>
+      <li><a href="#menu">Меню</a></li>
+      <li><a href="#special">Special</a></li>
+      <li><a href="#visit">Контакты</a></li>
+    </ul>
+    <a class="btn btn-blue" href="#visit">Как добраться</a>
+  </div>
+</header>
+<div class="meander" aria-hidden="true"></div>
+
+<main id="top">
+
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div>
+      <p class="greek" id="greet"></p>
+      <h1>Добро пожаловать в маленькую Грецию</h1>
+      <p class="lead">Кофейня в Шымкенте: breakfast, coffee, lunch. Средиземноморский уют каждый день с 08:00 до 02:00.</p>
+      <div class="award"><i aria-hidden="true">🏆</i><div><b>Лучшая кофейня 2026</b><span>Премия 2ГИС</span></div></div>
+      <div class="hero-actions">
+        <a class="btn btn-blue" href="#menu">Смотреть меню</a>
+        <a class="btn btn-line" href="#wheel">Не знаю, что заказать</a>
+      </div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <span class="lemon">🍋</span>
+      <span class="sun"></span>
+      <div class="house h1"><span class="win"></span></div>
+      <div class="house h2"><span class="dome"></span><span class="win"></span></div>
+      <div class="house h3"><span class="win"></span></div>
+      <div class="house h4"><span class="dome"></span></div>
+      <div class="sea"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats rv">
+      <div class="stat"><b>4,9 ★</b><span>рейтинг в 2ГИС</span></div>
+      <div class="stat"><b>1 411</b><span>отзывов гостей</span></div>
+      <div class="stat"><b>до 02:00</b><span>открыты каждый день</span></div>
+      <div class="stat"><b>120</b><span>мест в зале</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wheel-sec" id="wheel" style="margin-top:-40px;padding-top:136px">
+  <div class="wrap wheel-wrap">
+    <div class="rv">
+      <p class="kicker">Игра</p>
+      <h2 style="font-size:clamp(36px,5vw,58px)">Не можете выбрать? Крутите лимон</h2>
+      <p style="color:var(--ink-soft);font-size:17px;margin:16px 0 26px">Нажмите на лимон в центре колеса, и оно подскажет, что попробовать сегодня в Coffeeteria.</p>
+      <div class="result" id="result">
+        <small>Ваш выбор</small>
+        <h3>Пока загадка…</h3>
+        <p>Колесо ждёт, когда вы его крутанёте.</p>
+      </div>
+    </div>
+    <div class="wheel-box rv">
+      <span class="pointer" aria-hidden="true"></span>
+      <div class="wheel" id="wheelEl"></div>
+      <button class="hub" id="spin" type="button" aria-label="Крутить колесо">🍋</button>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Меню</p>
+      <h2>Греция, Турция и любимая классика</h2>
+      <p>Греческая и турецкая кухня, пицца на дровах и завтраки. Вот что есть в Coffeeteria.</p>
+    </div>
+    <div class="mgrid">
+      <div class="mc rv"><div class="e">🍳</div><h3>Завтраки</h3><span class="when">ежедневно 08:00–13:00</span><ul><li>Английский</li><li>Турецкий</li><li>Блины</li><li>Поздний завтрак</li></ul></div>
+      <div class="mc rv"><div class="e">🇬🇷</div><h3>Греция</h3><span class="when">гирос, сувлаки и не только</span><ul><li>Гирос</li><li>Сувлаки</li><li>Пита</li><li>Мидии</li><li>Салаты</li></ul></div>
+      <div class="mc rv"><div class="e">🔥</div><h3>Из печи</h3><span class="when">пицца на дровах</span><ul><li>Пицца на дровах</li><li>Хачапури</li></ul></div>
+      <div class="mc rv"><div class="e">🍝</div><h3>Горячее</h3><span class="when">на обед и ужин</span><ul><li>Паста</li><li>Стейки</li><li>Рамен</li><li>Том-ям</li><li>Супы</li></ul></div>
+      <div class="mc rv"><div class="e">☕</div><h3>Напитки</h3><span class="when">кофе из качественного зерна</span><ul><li>Бамбл</li><li>Айс-кофе</li><li>Смузи</li><li>Свежевыжатые соки</li><li>Лимонады</li><li>Милкшейки</li></ul></div>
+      <div class="mc rv"><div class="e">🥐</div><h3>Сладкое</h3><span class="when">своя кондитерская</span><ul><li>Синнабон</li><li>Десерты</li><li>Горячий шоколад</li></ul></div>
+    </div>
+    <p class="note"><b>Это демо.</b> На готовом сайте здесь будет полное меню с ценами и фото. Перенесём его из вашего меню.</p>
+  </div>
+</section>
+
+<section class="special" id="special">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Special menu · осень</p>
+      <h2>Ваше новое любимое блюдо уже ждёт</h2>
+      <p>Сезонные позиции, которые хочется пробовать без спешки и делить с близкими.</p>
+    </div>
+    <div class="sgrid">
+      <article class="sc rv"><div class="e">🦐</div><h3>Паста с креветками</h3><p>В томатном соусе с домашней страчателлой.</p></article>
+      <article class="sc rv"><div class="e">🎃</div><h3>Тыквенная лазанья</h3><p>С домашним айраном. Нежное сочетание, которое захочется повторить.</p></article>
+      <article class="sc rv"><div class="e">🫖</div><h3>Согревающие напитки</h3><p>Новые авторские чаи осеннего меню, чтобы у каждого прохладного дня был свой вкус.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="fam">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kicker">Для всех</p>
+      <h2>Самые тёплые моменты за одним столом</h2>
+      <p>Приходите всей семьёй, отмечайте дни рождения или работайте с ноутбуком. В зале 120 мест, поэтому места хватит всем.</p>
+    </div>
+    <div class="feats">
+      <div class="feat rv"><div class="e">🎂</div><h3>Праздники</h3><p>Дни рождения и семейные встречи</p></div>
+      <div class="feat rv"><div class="e">🧁</div><h3>Детские мастер-классы</h3><p>Следите за анонсами в Instagram</p></div>
+      <div class="feat rv"><div class="e">💻</div><h3>Можно с ноутбуком</h3><p>Светло, тихая музыка</p></div>
+      <div class="feat rv"><div class="e">🕌</div><h3>Молельная комната</h3><p>Отдельное тихое помещение</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">1 411 отзывов · 4,9 в 2ГИС</p>
+      <h2>Что говорят гости</h2>
+    </div>
+    <div class="revs">
+      <figure class="rev rv"><div class="stars">★★★★★</div><p>«Заходя с порога заведения, интерьер завораживает. Кухня восхитительная. 10/10»</p><small>Отзыв в 2ГИС</small></figure>
+      <figure class="rev rv"><div class="stars">★★★★★</div><p>«Мы уже второй раз у вас в городе, но каждый раз хотим именно к вам»</p><small>Отзыв в 2ГИС</small></figure>
+      <figure class="rev rv"><div class="stars">★★★★★</div><p>«Очень вкусный кофе! Сорт действительно качественный, вкус и аромат сразу чувствуются»</p><small>Отзыв в 2ГИС</small></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="vcard rv">
+      <h2>Ждём вас каждый день</h2>
+      <dl class="rows">
+        <div class="row"><dt>Адрес</dt><dd>Шымкент, улица Аргынбекова, 29/4 к1</dd></div>
+        <div class="row"><dt>Часы</dt><dd>Ежедневно 08:00–02:00<br><small style="color:var(--ink-soft)">завтраки 08:00–13:00</small></dd></div>
+        <div class="row"><dt>Телефон</dt><dd><a href="tel:+77020660909">+7 702 066 09 09</a></dd></div>
+        <div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/coffeeteria.kz/" target="_blank" rel="noopener">@coffeeteria.kz</a></dd></div>
+      </dl>
+    </div>
+    <div class="go rv">
+      <div>
+        <span class="status" id="status"><i></i><span></span></span>
+        <h3>Аргынбекова, 29/4</h3>
+        <p>Постройте маршрут в 2ГИС или напишите нам в WhatsApp.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-lemon" href="https://2gis.kz/shymkent/firm/70000001100226819" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+        <a class="btn btn-o" href="https://wa.me/77020660909" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="meander" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <span>© Coffeeteria, Шымкент</span>
+    <span>Демо-сайт сделан <a href="https://t.me/pixelstudiokz" target="_blank" rel="noopener">Pixel Studio</a></span>
+  </div>
+</footer>
+
+<script>
+const local = () => new Date(Date.now() + (new Date().getTimezoneOffset() + 300) * 60000);
+
+/* greeting + status (Shymkent, UTC+5) */
+(function(){
+  const n = local(), h = n.getHours(), m = h*60 + n.getMinutes();
+  const g = h >= 5 && h < 12 ? ["Καλημέρα!","доброе утро по-гречески"]
+          : h >= 12 && h < 18 ? ["Γεια σας!","здравствуйте по-гречески"]
+          : h >= 18 && h < 23 ? ["Καλησπέρα!","добрый вечер по-гречески"]
+          : ["Καληνύχτα!","доброй ночи по-гречески"];
+  document.getElementById("greet").innerHTML = `${g[0]}<small>— ${g[1]}</small>`;
+  const open = m >= 480 || m < 120;
+  const st = document.getElementById("status");
+  st.classList.toggle("closed", !open);
+  st.querySelector("span").textContent = open ? "Сейчас открыто · до 02:00" : "Сейчас закрыто · откроемся в 08:00";
+})();
+
+/* wheel */
+const DISHES = [
+  ["Гирос","Греческая классика в Шымкенте.","Греция"],
+  ["Турецкий завтрак","Сытное начало дня. Завтраки до 13:00.","Завтрак"],
+  ["Пицца на дровах","Прямо из печи, с дымком.","Из печи"],
+  ["Мидии","Для настоящего средиземноморского вечера.","Греция"],
+  ["Паста с креветками","Special menu: томатный соус и домашняя страчателла.","Special"],
+  ["Тыквенная лазанья","Сезонное блюдо с домашним айраном.","Осень"],
+  ["Синнабон и кофе","Рецепт уютной осени: любимый кофе и свежий синнабон.","Сладкое"],
+  ["Сувлаки","Шпажки по-гречески.","Греция"]
+];
+const wheel = document.getElementById("wheelEl");
+const N = DISHES.length, seg = 360 / N;
+const colors = DISHES.map((_,i)=> i%2 ? "#1f5fa8" : "#fbfaf6");
+wheel.style.background = `conic-gradient(${colors.map((c,i)=>`${c} ${i*seg}deg ${(i+1)*seg}deg`).join(",")})`;
+DISHES.forEach((d,i)=>{
+  const l = document.createElement("span");
+  l.className = "lbl" + (i%2 ? " on-blue" : "");
+  l.textContent = d[0];
+  l.style.transform = `rotate(${i*seg + seg/2 - 90}deg)`;
+  wheel.appendChild(l);
+});
+let rot = 0, spinning = false;
+document.getElementById("spin").addEventListener("click", ()=>{
+  if (spinning) return;
+  spinning = true;
+  const pick = Math.floor(Math.random()*N);
+  const target = 360 - (pick*seg + seg/2);
+  const cur = ((rot % 360) + 360) % 360;
+  rot += 360*5 + ((target - cur + 360) % 360);
+  wheel.style.transform = `rotate(${rot}deg)`;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  setTimeout(()=>{
+    const d = DISHES[pick], r = document.getElementById("result");
+    r.innerHTML = `<small>${d[2]}</small><h3>${d[0]}</h3><p>${d[1]}</p>`;
+    r.classList.remove("pop"); void r.offsetWidth; r.classList.add("pop");
+    spinning = false;
+  }, reduce ? 50 : 4300);
+});
+
+/* reveal */
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold:.12 });
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
